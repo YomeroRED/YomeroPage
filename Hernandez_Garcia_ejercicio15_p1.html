@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Registro de Préstamo</title>
+  </head>
+
+  <body>
+    <h1>Bitácora de Préstamo de Equipos</h1>
+    <h3>Facultad de Ingeniería Mochis</h3>
+
+    <form action="registros.html" method="get">
+      <p>
+        <label>Nombre:</label>
+        <input type="text" name="nombre" required />
+      </p>
+
+      <p>
+        <label>Carrera:</label>
+        <input type="radio" name="carrera" value="CG" required /> CG
+        <input type="radio" name="carrera" value="IS" /> IS
+        <input type="radio" name="carrera" value="IP" /> IP
+        <input type="radio" name="carrera" value="IN" /> IN
+      </p>
+
+      <p>
+        <label>Grupo:</label>
+        <input type="text" name="grupo" required />
+      </p>
+
+      <p>
+        <label>Tipo de Usuario:</label>
+        <input type="radio" name="tipo" value="Alumno" required /> Alumno
+        <input type="radio" name="tipo" value="Profesor" /> Profesor
+      </p>
+
+      <p>
+        <label>Equipo que solicita:</label>
+        <input type="text" name="equipo" required />
+      </p>
+
+      <p>
+        <label>Fecha de Préstamo:</label>
+        <input type="date" name="fechaPrestamo" required />
+      </p>
+
+      <p>
+        <label>Hora de Préstamo:</label>
+        <input type="time" name="horaPrestamo" required />
+      </p>
+
+      <p>
+        <label>Fecha de Entrega:</label>
+        <input type="date" name="fechaEntrega" required />
+      </p>
+
+      <p>
+        <label>Hora de Entrega:</label>
+        <input type="time" name="horaEntrega" required />
+      </p>
+
+      <p>
+        <input type="submit" value="Guardar Registro" />
+      </p>
+    </form>
+  </body>
+</html>

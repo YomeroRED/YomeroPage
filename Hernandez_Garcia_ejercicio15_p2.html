@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Registros de Préstamos</title>
+  </head>
+
+  <body>
+    <h1>Registros de Préstamos</h1>
+
+    <table border="1" cellpadding="5">
+      <tr>
+        <th>Nombre</th>
+        <th>Carrera</th>
+        <th>Grupo</th>
+        <th>Tipo</th>
+        <th>Equipo</th>
+        <th>Fecha Préstamo</th>
+        <th>Hora</th>
+        <th>Fecha Entrega</th>
+        <th>Hora</th>
+      </tr>
+      <tbody id="tablaDatos"></tbody>
+    </table>
+
+    <br />
+    <a href="formulario.html">Nuevo Registro</a>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+
+      const nombre = params.get("nombre");
+      const carrera = params.get("carrera");
+      const grupo = params.get("grupo");
+      const tipo = params.get("tipo");
+      const equipo = params.get("equipo");
+      const fechaPrestamo = params.get("fechaPrestamo");
+      const horaPrestamo = params.get("horaPrestamo");
+      const fechaEntrega = params.get("fechaEntrega");
+      const horaEntrega = params.get("horaEntrega");
+
+      if (nombre) {
+        document.getElementById("tablaDatos").innerHTML = `
+        <tr>
+          <td>${nombre}</td>
+          <td>${carrera}</td>
+          <td>${grupo}</td>
+          <td>${tipo}</td>
+          <td>${equipo}</td>
+          <td>${fechaPrestamo}</td>
+          <td>${horaPrestamo}</td>
+          <td>${fechaEntrega}</td>
+          <td>${horaEntrega}</td>
+        </tr>
+      `;
+      }
+    </script>
+  </body>
+</html>
