@@ -27,15 +27,10 @@
       <section class="practicas">
         <h2>Prácticas</h2>
 
-        <ul>
-          <?php
-          $proyectos = glob("Proyectos/*.html");
-          foreach ($proyectos as $proyecto) {
-            echo "<li><a href='$proyecto' target='_blank'>$proyecto</a></li>";
-          }
-          ?>
-        </ul>
+        <div id="lista-proyectos"></div>
       </section>
+
+      <script src="js/proyectos.js"></script>
     </main>
 
     <footer>
