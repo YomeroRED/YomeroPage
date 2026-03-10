@@ -1,0 +1,102 @@
+[
+  {
+    "nombre": "Practica 1",
+    "archivo": "Hernandez_Garcia_ejercicio1.html",
+    "descripcion": "Hola mundo."
+  },
+  {
+    "nombre": "Practica 2",
+    "archivo": "Hernandez_Garcia_ejercicio2.html",
+    "descripcion": "Varios encabezados."
+  },
+  {
+    "nombre": "Practica 3",
+    "archivo": "Hernandez_Garcia_ejercicio3.html",
+    "descripcion": "Links."
+  },
+  {
+    "nombre": "Practica 4",
+    "archivo": "Hernandez_Garcia_ejercicio4.html",
+    "descripcion": "Tablas."
+  },
+  {
+    "nombre": "Practica 5",
+    "archivo": "Hernandez_Garcia_ejercicio5.html",
+    "descripcion": "Listas."
+  },
+  {
+    "nombre": "Practica 6",
+    "archivo": "Hernandez_Garcia_ejercicio6.html",
+    "descripcion": "Formularios."
+  },
+  {
+    "nombre": "Practica 7",
+    "archivo": "Hernandez_Garcia_ejercicio7.html",
+    "descripcion": "Multimedia."
+  },
+  {
+    "nombre": "Practica 8",
+    "archivo": "Hernandez_Garcia_ejercicio8.html",
+    "descripcion": "CSS básico."
+  },
+  {
+    "nombre": "Practica 9",
+    "archivo": "Hernandez_Garcia_ejercicio9.html",
+    "descripcion": "CSS avanzado."
+  },
+  {
+    "nombre": "Practica 10",
+    "archivo": "Hernandez_Garcia_ejercicio10.html",
+    "descripcion": "Proyecto final."
+  },
+  {
+    "nombre": "Practica 11",
+    "archivo": "Hernandez_Garcia_ejercicio11.html",
+    "descripcion": "Proyecto final mejorado."
+  },
+  {
+    "nombre": "Practica 12",
+    "archivo": "Hernandez_Garcia_ejercicio12.html",
+    "descripcion": "Proyecto final con JavaScript."
+  },
+  {
+    "nombre": "Practica 13",
+    "archivo": "Hernandez_Garcia_ejercicio13.html",
+    "descripcion": "Proyecto final con JavaScript y CSS."
+  },
+  {
+    "nombre": "Practica 14",
+    "archivo": "Hernandez_Garcia_ejercicio14.html",
+    "descripcion": "Proyecto final con JavaScript, CSS y multimedia."
+  },
+  {
+    "nombre": "Practica 15",
+    "archivo": "Hernandez_Garcia_ejercicio15.html",
+    "descripcion": "Prestamos de equipo en la uas."
+  },
+  {
+    "nombre": "Practica 16",
+    "archivo": "Hernandez_Garcia_ejercicio16.html",
+    "descripcion": "Proyecto final con mejoras de accesibilidad."
+  },
+  {
+    "nombre": "Practica 17",
+    "archivo": "Hernandez_Garcia_ejercicio17.html",
+    "descripcion": "Proyecto final con mejoras de rendimiento."
+  },
+  {
+    "nombre": "Practica 18",
+    "archivo": "Hernandez_Garcia_ejercicio18.html",
+    "descripcion": "Proyecto final con mejoras de SEO."
+  },
+  {
+    "nombre": "Practica 19",
+    "archivo": "Hernandez_Garcia_ejercicio19.html",
+    "descripcion": "Proyecto final con mejoras de seguridad."
+  },
+  {
+    "nombre": "Practica 20",
+    "archivo": "Hernandez_Garcia_ejercicio20.html",
+    "descripcion": "Proyecto final con mejoras de usabilidad."
+  }
+]
