@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mis Trabajos</title>
+
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="menu-icon">&#9776;</div>
+      <h1>Mis trabajos</h1>
+      <div class="opiniones">
+        Opiniones
+        <div class="trash-icon">&#128465;</div>
+      </div>
+    </header>
+
+    <main>
+      <section class="sobre-mi">
+        <h2>Sobre mí</h2>
+        <p>Descripción personal.</p>
+      </section>
+
+      <section class="practicas">
+        <h2>Prácticas</h2>
+
+        <ul>
+          <?php
+          $proyectos = glob("Proyectos/*.html");
+          foreach ($proyectos as $proyecto) {
+            echo "<li><a href='$proyecto' target='_blank'>$proyecto</a></li>";
+          }
+          ?>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <button>Classroom</button>
+      <button>ChatGPT</button>
+      <button>Buscaminas</button>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
