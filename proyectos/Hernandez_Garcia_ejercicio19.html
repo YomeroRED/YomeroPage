@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Salidas de JavaScript</title>
+  </head>
+  <body>
+    <h1>Ejercicio #19: Salidas de texto en JavaScript</h1>
+    <hr />
+
+    <!-- ================================================
+    MÉTODO 1: innerHTML  
+    Se escribe contenido HTML dentro de un elemento usando su ID.
+    Interpreta etiquetas como <b>, <br>, etc.
+    MÉTODO 1.5: innerText
+    Solo escribe texto plano, no interpreta etiquetas HTML.
+  ================================================ -->
+    <h2>Método 1: innerHTML y innerText</h2>
+
+    <!-- Este div va a recibir el contenido desde JavaScript -->
+    <div id="salida-innerHTML"></div>
+    <div id="salida-innerText"></div>
+
+    <hr />
+
+    <!-- ================================================
+    MÉTODO 2: document.write()
+    Escribe directamente en el documento HTML.
+    Si se usa después de cargar la página, borra todo el contenido.
+    Por eso se usa normalmente mientras la página carga.
+  ================================================ -->
+    <h2>Método 2: document.write()</h2>
+
+    <script>
+      // Esto se ejecuta mientras la página está cargando,
+      // así que agrega contenido sin borrar nada.
+      document.write("<p>que otro dato personal podria exponer?</p>");
+      document.write("<p>Altura: 180 cm, creo</p>");
+    </script>
+
+    <hr />
+
+    <!-- ================================================
+    MÉTODO 3: window.alert()
+    Muestra una ventana emergente (popup) en el navegador.
+    El usuario tiene que cerrarla para seguir navegando.
+  ================================================ -->
+    <h2>Método 3: window.alert()</h2>
+
+    <button onclick="mostrarAlerta()">Bajo tu propio riesgo</button>
+
+    <hr />
+
+    <!-- ================================================
+    MÉTODO 4: console.log()
+    Escribe en la consola del navegador.
+    Solo lo puede ver el desarrollador (F12 → Consola).
+    No es visible para el usuario normal.
+  ================================================ -->
+    <h2>Método 4: console.log()</h2>
+
+    <button onclick="mostrarConsola()">Mira la consola</button>
+
+    <hr />
+
+    <!-- ================================================
+    CÓDIGO JAVASCRIPT
+    Todo el JS va aquí abajo, antes de cerrar el body.
+  ================================================ -->
+    <script>
+      var nombre = "Raúl Eduardo Hernández García";
+      var carrera = "Ing. en Software";
+      var semestre = "6to semestre";
+
+      // ── MÉTODO 1: innerHTML ──
+      // Busca el elemento con id="salida-innerHTML"
+      // y le mete contenido HTML con etiquetas <b> y <br>
+      document.getElementById("salida-innerHTML").innerHTML =
+        "<b>Nombre:</b> " +
+        nombre +
+        "<br>" +
+        "<b>carrera:</b> " +
+        carrera +
+        "<br>" +
+        "<b>Semestre:</b> " +
+        semestre;
+
+      // ── MÉTODO 1.5: innerText ──
+      // Busca el elemento con id="salida-innerText"
+      // y le pone solo texto plano, sin HTML
+      document.getElementById("salida-innerText").innerText =
+        "Edad: 22 años\n" +
+        "Actualmente en busca de empleo, sin experiencia en PHP.";
+
+      // ── MÉTODO 3: window.alert() ──
+      // Esta función se llama cuando el usuario presiona el botón
+      function mostrarAlerta() {
+        window.alert("Hi:\n" + "My name is Raúl. I'm from México.");
+      }
+
+      // ── MÉTODO 5: console.log() ──
+      // Esta función se llama cuando el usuario presiona el botón
+      // Los mensajes aparecen en F12 → pestaña "Consola"
+      function mostrarConsola() {
+        console.log("=== Datos del alumno ===");
+        console.log("Nombre: " + nombre);
+        console.log("Carrera: " + carrera);
+        console.log("Semestre: " + semestre);
+      }
+    </script>
+  </body>
+</html>
