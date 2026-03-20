@@ -98,5 +98,10 @@
     "nombre": "Practica 20",
     "archivo": "Hernandez_Garcia_ejercicio20.html",
     "descripcion": "Impresion de operaciones con variables en JavaScript."
+  },
+  {
+    "nombre": "Practica 22",
+    "archivo": "Hernandez_Garcia_ejercicio22.html",
+    "descripcion": "Formula general pero con formularios."
   }
 ]

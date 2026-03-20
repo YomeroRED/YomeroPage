@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fórmula General</title>
+
+    <style>
+      :root {
+        --bg: #eef2f7;
+        --card: #ffffff;
+        --dark: #1c1c2e;
+        --muted: #8892a4;
+        --border: #dde3ec;
+        --x1: #e74c3c;
+        --x2: #2980b9;
+        --shadow: 0 10px 40px rgba(28, 28, 46, 0.1);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: var(--bg);
+        font-family: "Courier New", Courier, monospace;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 16px;
+      }
+
+      /* ── Fondo con patrón de puntos ── */
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image: radial-gradient(circle, #c5cfe0 1px, transparent 1px);
+        background-size: 28px 28px;
+        opacity: 0.5;
+        pointer-events: none;
+      }
+
+      /* ── Tarjeta ── */
+      .card {
+        position: relative;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        box-shadow: var(--shadow);
+        width: 100%;
+        max-width: 460px;
+        padding: 44px 40px 36px;
+        animation: subir 0.5s ease both;
+      }
+
+      @keyframes subir {
+        from {
+          opacity: 0;
+          transform: translateY(28px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* ── Franja de color arriba ── */
+      .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: linear-gradient(90deg, var(--x1), var(--x2));
+        border-radius: 16px 16px 0 0;
+      }
+
+      /* ── Encabezado ── */
+      .encabezado {
+        text-align: center;
+        margin-bottom: 24px;
+      }
+
+      .encabezado small {
+        display: block;
+        font-size: 0.65rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 10px;
+      }
+
+      .encabezado h1 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 1.75rem;
+        color: var(--dark);
+        font-weight: normal;
+        letter-spacing: 0.02em;
+      }
+
+      /* ── Caja de la fórmula ── */
+      .formula-visual {
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 16px;
+        text-align: center;
+        margin-bottom: 28px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 1rem;
+        color: var(--dark);
+        line-height: 1.4;
+      }
+
+      .formula-visual .numerador {
+        display: block;
+        border-bottom: 2px solid var(--dark);
+        padding-bottom: 4px;
+        margin-bottom: 4px;
+        letter-spacing: 0.05em;
+      }
+
+      .formula-visual .denominador {
+        display: block;
+        letter-spacing: 0.05em;
+      }
+
+      .formula-visual .fraccion {
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      .formula-visual .igual {
+        vertical-align: middle;
+        margin: 0 10px;
+        font-size: 1.2rem;
+      }
+
+      .formula-visual .x-var {
+        vertical-align: middle;
+        font-style: italic;
+        font-size: 1.1rem;
+      }
+
+      /* ── Inputs ── */
+      .fila-inputs {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 12px;
+        margin-bottom: 22px;
+      }
+
+      .grupo label {
+        display: block;
+        font-size: 0.68rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 6px;
+      }
+
+      .grupo input {
+        width: 100%;
+        padding: 10px 12px;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 1rem;
+        color: var(--dark);
+        background: var(--bg);
+        border: 1.5px solid var(--border);
+        border-radius: 8px;
+        outline: none;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+        text-align: center;
+      }
+
+      .grupo input:focus {
+        border-color: var(--x2);
+        box-shadow: 0 0 0 3px rgba(41, 128, 185, 0.12);
+        background: #fff;
+      }
+
+      /* ── Botón ── */
+      .btn {
+        width: 100%;
+        padding: 13px;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 0.82rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #fff;
+        background: var(--dark);
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition:
+          background 0.2s,
+          transform 0.1s;
+      }
+
+      .btn:hover {
+        background: #2c2c45;
+      }
+      .btn:active {
+        transform: scale(0.98);
+      }
+
+      /* ── Separador ── */
+      .sep {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 24px 0 20px;
+      }
+
+      /* ── Zona de resultados ── */
+      .resultados {
+        display: none;
+      }
+
+      .resultados.visible {
+        display: block;
+        animation: subir 0.35s ease both;
+      }
+
+      .res-titulo {
+        text-align: center;
+        font-size: 0.65rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 14px;
+      }
+
+      .fila-res {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .res-box {
+        border-radius: 10px;
+        padding: 18px 12px;
+        text-align: center;
+      }
+
+      .res-box.x1 {
+        background: rgba(231, 76, 60, 0.07);
+        border: 1.5px solid rgba(231, 76, 60, 0.25);
+      }
+
+      .res-box.x2 {
+        background: rgba(41, 128, 185, 0.07);
+        border: 1.5px solid rgba(41, 128, 185, 0.25);
+      }
+
+      .res-box .res-label {
+        font-size: 0.68rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+      }
+
+      .res-box.x1 .res-label {
+        color: var(--x1);
+      }
+      .res-box.x2 .res-label {
+        color: var(--x2);
+      }
+
+      .res-box .res-valor {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 1.9rem;
+        color: var(--dark);
+        line-height: 1;
+      }
+
+      /* ── Caja de error ── */
+      .error-box {
+        background: rgba(231, 76, 60, 0.07);
+        border: 1.5px solid rgba(231, 76, 60, 0.25);
+        border-radius: 10px;
+        padding: 14px 16px;
+        color: var(--x1);
+        font-size: 0.78rem;
+        line-height: 1.7;
+        text-align: center;
+      }
+
+      /* ── Pie ── */
+      .pie {
+        margin-top: 24px;
+        text-align: center;
+        font-size: 0.62rem;
+        color: var(--border);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <!-- Franja de color (via ::before en CSS) -->
+
+      <!-- Encabezado -->
+      <div class="encabezado">
+        <small>Ecuación Cuadrática · Cosillas en JS</small>
+        <h1>Fórmula General</h1>
+      </div>
+
+      <!-- Fórmula visual con CSS puro -->
+      <div class="formula-visual">
+        <span class="x-var">x</span>
+        <span class="igual">=</span>
+        <span class="fraccion">
+          <span class="numerador">−b ± √( b² − 4ac )</span>
+          <span class="denominador">2a</span>
+        </span>
+      </div>
+
+      <!-- Inputs -->
+      <div class="fila-inputs">
+        <div class="grupo">
+          <label for="val-a">a</label>
+          <input type="number" id="val-a" placeholder="1" step="any" />
+        </div>
+        <div class="grupo">
+          <label for="val-b">b</label>
+          <input type="number" id="val-b" placeholder="−5" step="any" />
+        </div>
+        <div class="grupo">
+          <label for="val-c">c</label>
+          <input type="number" id="val-c" placeholder="6" step="any" />
+        </div>
+      </div>
+
+      <!-- Botón -->
+      <button class="btn" onclick="calcular()">Calcular x₁ y x₂</button>
+
+      <!-- Resultados -->
+      <div class="resultados" id="zona-resultados">
+        <hr class="sep" />
+        <div class="res-titulo">Resultados</div>
+        <div id="contenido-resultado"></div>
+      </div>
+    </div>
+
+    <script>
+      function calcular() {
+        // 1. Leer los valores del formulario
+        var a = parseFloat(document.getElementById("val-a").value);
+        var b = parseFloat(document.getElementById("val-b").value);
+        var c = parseFloat(document.getElementById("val-c").value);
+
+        // 2. Validar que los campos no estén vacíos
+        if (isNaN(a) || isNaN(b) || isNaN(c)) {
+          alert(
+            "Por favor ingresa valores numéricos en los tres campos (a, b y c).",
+          );
+          return;
+        }
+
+        // 3. Validar que 'a' no sea 0
+        if (a === 0) {
+          alert(
+            "El valor de 'a' no puede ser 0.\nSi a=0, no es una ecuación cuadrática.",
+          );
+          return;
+        }
+
+        // 4. Calcular el discriminante: b² - 4ac
+        var discriminante = b * b - 4 * a * c;
+
+        // 5. Mostrar la zona de resultados
+        var zona = document.getElementById("zona-resultados");
+        var contenido = document.getElementById("contenido-resultado");
+        zona.classList.add("visible");
+
+        // 6. Evaluar el discriminante y mostrar resultados
+        if (discriminante < 0) {
+          // Sin soluciones reales
+          contenido.innerHTML =
+            '<div class="error-box">' +
+            "⚠ Discriminante = <b>" +
+            discriminante +
+            "</b><br>" +
+            "Como es negativo, la ecuación no tiene<br>soluciones reales (raíces complejas)." +
+            "</div>";
+        } else {
+          // Calcular x1 y x2
+          var raiz = Math.sqrt(discriminante);
+          var x1 = (-b + raiz) / (2 * a);
+          var x2 = (-b - raiz) / (2 * a);
+
+          // Redondear a 4 decimales
+          var x1r = Math.round(x1 * 10000) / 10000;
+          var x2r = Math.round(x2 * 10000) / 10000;
+
+          // Mostrar cajas de resultado
+          contenido.innerHTML =
+            '<div class="fila-res">' +
+            '<div class="res-box x1">' +
+            '<div class="res-label">x₁</div>' +
+            '<div class="res-valor">' +
+            x1r +
+            "</div>" +
+            "</div>" +
+            '<div class="res-box x2">' +
+            '<div class="res-label">x₂</div>' +
+            '<div class="res-valor">' +
+            x2r +
+            "</div>" +
+            "</div>" +
+            "</div>";
+
+          // Debug en consola
+          console.log("=== Fórmula General ===");
+          console.log("a=" + a + "  b=" + b + "  c=" + c);
+          console.log("Discriminante: " + discriminante);
+          console.log("x1 = " + x1);
+          console.log("x2 = " + x2);
+        }
+      }
+    </script>
+  </body>
+</html>
