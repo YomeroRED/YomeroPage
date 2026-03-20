@@ -11,7 +11,7 @@ fetch("data/practicas.json")
       card.innerHTML = `
 <h3>${practica.nombre}</h3>
 <p>${practica.descripcion}</p>
-<a href="practicas/${practica.archivo}" target="_blank">
+<a href="proyectos/${practica.archivo}" target="_blank">
 Ver practicas
 </a>
 `;
