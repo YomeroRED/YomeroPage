@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Variables</title>
+  </head>
+  <body>
+    <h1>Ejercicio #20: Impresion de operaciones en JavaScript</h1>
+    <hr />
+
+    <h2>Suma</h2>
+
+    <div id="suma"></div>
+
+    <hr />
+
+    <h2>Resta</h2>
+
+    <div id="resta"></div>
+
+    <hr />
+
+    <h2>Multiplicación</h2>
+
+    <div id="multiplicacion"></div>
+
+    <hr />
+
+    <h2>División</h2>
+
+    <div id="division"></div>
+
+    <hr />
+
+    <h2>Exponenciacion</h2>
+
+    <div id="exponenciacion"></div>
+
+    <!-- ================================================
+    CÓDIGO JAVASCRIPT
+    Todo el JS va aquí abajo, antes de cerrar el body.
+  ================================================ -->
+    <script>
+      var valor_1 = 10;
+      var valor_2 = 5;
+      document.getElementById("suma").innerText =
+        "Suma: " + valor_1 + " + " + valor_2 + " = " + (valor_1 + valor_2);
+      document.getElementById("resta").innerText =
+        "Resta: " + valor_1 + " - " + valor_2 + " = " + (valor_1 - valor_2);
+      document.getElementById("multiplicacion").innerText =
+        "Multiplicación: " +
+        valor_1 +
+        " * " +
+        valor_2 +
+        " = " +
+        valor_1 * valor_2;
+      document.getElementById("division").innerText =
+        "División: " + valor_1 + " / " + valor_2 + " = " + valor_1 / valor_2;
+      document.getElementById("exponenciacion").innerText =
+        "Exponenciación: " +
+        valor_1 +
+        " ** " +
+        valor_2 +
+        " = " +
+        valor_1 ** valor_2;
+    </script>
+  </body>
+</html>
