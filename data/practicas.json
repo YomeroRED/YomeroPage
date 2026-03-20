@@ -100,6 +100,11 @@
     "descripcion": "Impresion de operaciones con variables en JavaScript."
   },
   {
+    "nombre": "Practica 21",
+    "archivo": "Hernandez_Garcia_ejercicio21.html",
+    "descripcion": "Calculadora, con formulario bonito."
+  },
+  {
     "nombre": "Practica 22",
     "archivo": "Hernandez_Garcia_ejercicio22.html",
     "descripcion": "Formula general pero con formularios."

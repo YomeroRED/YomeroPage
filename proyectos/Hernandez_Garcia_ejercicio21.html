@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+
+    <style>
+      :root {
+        --bg: #eef2f7;
+        --card: #ffffff;
+        --dark: #1c1c2e;
+        --muted: #8892a4;
+        --border: #dde3ec;
+        --x1: #e74c3c;
+        --x2: #2980b9;
+        --shadow: 0 10px 40px rgba(28, 28, 46, 0.1);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: var(--bg);
+        font-family: "Courier New", Courier, monospace;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 16px;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image: radial-gradient(circle, #c5cfe0 1px, transparent 1px);
+        background-size: 28px 28px;
+        opacity: 0.5;
+        pointer-events: none;
+      }
+
+      /* ── Tarjeta ── */
+      .card {
+        position: relative;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        box-shadow: var(--shadow);
+        width: 100%;
+        max-width: 360px;
+        padding: 0 0 28px 0;
+        animation: subir 0.5s ease both;
+        overflow: hidden;
+      }
+
+      @keyframes subir {
+        from {
+          opacity: 0;
+          transform: translateY(28px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: linear-gradient(90deg, var(--x1), var(--x2));
+      }
+
+      /* ── Pantalla ── */
+      .pantalla {
+        background: var(--dark);
+        padding: 28px 24px 20px;
+        text-align: right;
+        min-height: 110px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+
+      .pantalla .expresion {
+        font-size: 0.8rem;
+        color: var(--muted);
+        margin-bottom: 6px;
+        min-height: 18px;
+        letter-spacing: 0.05em;
+      }
+
+      .pantalla .resultado {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 2.8rem;
+        color: #ffffff;
+        line-height: 1;
+        letter-spacing: -0.02em;
+        word-break: break-all;
+      }
+
+      /* ── Encabezado pequeño ── */
+      .encabezado {
+        text-align: center;
+        padding: 14px 0 10px;
+      }
+
+      .encabezado small {
+        font-size: 0.6rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      /* ── Grid de botones ── */
+      .botones {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        padding: 8px 20px 0;
+      }
+
+      /* ── Botón base ── */
+      button {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 1rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;
+        padding: 18px 0;
+        cursor: pointer;
+        transition:
+          transform 0.1s,
+          opacity 0.15s;
+        outline: none;
+      }
+
+      button:active {
+        transform: scale(0.94);
+      }
+
+      /* Números */
+      .btn-num {
+        background: var(--bg);
+        color: var(--dark);
+        border: 1px solid var(--border);
+      }
+
+      .btn-num:hover {
+        background: #e2e8f0;
+      }
+
+      /* Operadores */
+      .btn-op {
+        background: rgba(41, 128, 185, 0.1);
+        color: var(--x2);
+        border: 1px solid rgba(41, 128, 185, 0.25);
+        font-size: 1.2rem;
+      }
+
+      .btn-op:hover {
+        background: rgba(41, 128, 185, 0.2);
+      }
+
+      /* Igual */
+      .btn-igual {
+        background: var(--dark);
+        color: #fff;
+        font-size: 1.3rem;
+      }
+
+      .btn-igual:hover {
+        background: #2c2c45;
+      }
+
+      /* Limpiar */
+      .btn-clear {
+        background: rgba(231, 76, 60, 0.1);
+        color: var(--x1);
+        border: 1px solid rgba(231, 76, 60, 0.25);
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+      }
+
+      .btn-clear:hover {
+        background: rgba(231, 76, 60, 0.2);
+      }
+
+      /* Borrar un dígito */
+      .btn-del {
+        background: rgba(231, 76, 60, 0.07);
+        color: var(--x1);
+        border: 1px solid rgba(231, 76, 60, 0.15);
+        font-size: 1rem;
+      }
+
+      .btn-del:hover {
+        background: rgba(231, 76, 60, 0.15);
+      }
+
+      /* Botón cero ocupa 2 columnas */
+      .btn-cero {
+        grid-column: span 2;
+      }
+
+      /* ── Pie ── */
+      .pie {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 0.58rem;
+        color: var(--border);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <!-- Pantalla -->
+      <div class="pantalla">
+        <div class="expresion" id="expresion"></div>
+        <div class="resultado" id="resultado">0</div>
+      </div>
+
+      <!-- Subtítulo -->
+      <div class="encabezado">
+        <small>Calculadora simple</small>
+      </div>
+
+      <!-- Botones -->
+      <div class="botones">
+        <!-- Fila 1 -->
+        <button class="btn-clear" onclick="limpiar()">AC</button>
+        <button class="btn-del" onclick="borrar()">⌫</button>
+        <button class="btn-op" onclick="operar('**')">x^</button>
+        <button class="btn-op" onclick="operar('/')">÷</button>
+
+        <!-- Fila 2 -->
+        <button class="btn-num" onclick="digito('7')">7</button>
+        <button class="btn-num" onclick="digito('8')">8</button>
+        <button class="btn-num" onclick="digito('9')">9</button>
+        <button class="btn-op" onclick="operar('*')">×</button>
+
+        <!-- Fila 3 -->
+        <button class="btn-num" onclick="digito('4')">4</button>
+        <button class="btn-num" onclick="digito('5')">5</button>
+        <button class="btn-num" onclick="digito('6')">6</button>
+        <button class="btn-op" onclick="operar('-')">−</button>
+
+        <!-- Fila 4 -->
+        <button class="btn-num" onclick="digito('1')">1</button>
+        <button class="btn-num" onclick="digito('2')">2</button>
+        <button class="btn-num" onclick="digito('3')">3</button>
+        <button class="btn-op" onclick="operar('+')">+</button>
+
+        <!-- Fila 5 -->
+        <button class="btn-num btn-cero" onclick="digito('0')">0</button>
+        <button class="btn-num" onclick="digito('.')">.</button>
+        <button class="btn-igual" onclick="calcular()">=</button>
+      </div>
+    </div>
+
+    <script>
+      // Estado de la calculadora
+      var valorActual = ""; // número que se está escribiendo
+      var valorAnterior = ""; // número antes del operador
+      var operadorActual = ""; // operador seleccionado
+      var esperandoSegundo = false; // si ya se presionó un operador
+
+      // Pantalla
+      var pantallaResultado = document.getElementById("resultado");
+      var pantallaExpresion = document.getElementById("expresion");
+
+      // ── Agrega un dígito o punto ──
+      function digito(d) {
+        // Evitar doble punto
+        if (d === "." && valorActual.includes(".")) return;
+
+        // Si ya se esperaba el segundo número, limpiar pantalla
+        if (esperandoSegundo) {
+          valorActual = "";
+          esperandoSegundo = false;
+        }
+
+        valorActual += d;
+        pantallaResultado.innerText = valorActual;
+      }
+
+      // ── Selecciona un operador ──
+      function operar(op) {
+        // Si no hay número todavía, solo cambia el operador
+        if (valorActual === "" && valorAnterior !== "") {
+          operadorActual = op;
+          actualizarExpresion();
+          return;
+        }
+
+        // Si ya había un resultado parcial, calcular antes de continuar
+        if (valorAnterior !== "" && valorActual !== "" && !esperandoSegundo) {
+          calcular(true);
+        }
+
+        operadorActual = op;
+        valorAnterior =
+          valorActual !== "" ? valorActual : pantallaResultado.innerText;
+        esperandoSegundo = true;
+        actualizarExpresion();
+      }
+
+      // ── Calcula el resultado ──
+      function calcular(parcial) {
+        if (valorAnterior === "" || operadorActual === "") return;
+
+        var a = parseFloat(valorAnterior);
+        var b = parseFloat(
+          valorActual !== "" ? valorActual : pantallaResultado.innerText,
+        );
+
+        if (isNaN(a) || isNaN(b)) return;
+
+        var resultado;
+
+        if (operadorActual === "+") resultado = a + b;
+        if (operadorActual === "-") resultado = a - b;
+        if (operadorActual === "*") resultado = a * b;
+        if (operadorActual === "/") resultado = b !== 0 ? a / b : "Error";
+        if (operadorActual === "**") resultado = Math.pow(a, b);
+
+        // Redondear si hay muchos decimales
+        if (typeof resultado === "number") {
+          resultado = Math.round(resultado * 1e10) / 1e10;
+        }
+
+        // Mostrar la expresión completa arriba
+        var simbolo = { "+": "+", "-": "−", "*": "×", "/": "÷", "**": "^" };
+        pantallaExpresion.innerText =
+          a + " " + simbolo[operadorActual] + " " + b + " =";
+
+        pantallaResultado.innerText = resultado;
+
+        // Log en consola
+        console.log(a + " " + operadorActual + " " + b + " = " + resultado);
+
+        if (!parcial) {
+          // Reiniciar para la siguiente operación
+          valorAnterior = String(resultado);
+          valorActual = "";
+          operadorActual = "";
+          esperandoSegundo = true;
+        }
+      }
+
+      // ── Borra el último dígito ──
+      function borrar() {
+        if (esperandoSegundo) return;
+        valorActual = valorActual.slice(0, -1);
+        pantallaResultado.innerText = valorActual !== "" ? valorActual : "0";
+      }
+
+      // ── Limpia todo ──
+      function limpiar() {
+        valorActual = "";
+        valorAnterior = "";
+        operadorActual = "";
+        esperandoSegundo = false;
+        pantallaResultado.innerText = "0";
+        pantallaExpresion.innerText = "";
+      }
+
+      // ── Actualiza la expresión en pantalla ──
+      function actualizarExpresion() {
+        var simbolo = { "+": "+", "-": "−", "*": "×", "/": "÷", "**": "^" };
+        pantallaExpresion.innerText =
+          valorAnterior + " " + (simbolo[operadorActual] || "");
+      }
+
+      // ── Soporte de teclado ──
+      document.addEventListener("keydown", function (e) {
+        if (e.key >= "0" && e.key <= "9") digito(e.key);
+        if (e.key === ".") digito(".");
+        if (e.key === "+") operar("+");
+        if (e.key === "-") operar("-");
+        if (e.key === "*") operar("*");
+        if (e.key === "/") {
+          e.preventDefault();
+          operar("/");
+        }
+        if (e.key === "^") operar("**");
+        if (e.key === "Enter" || e.key === "=") calcular();
+        if (e.key === "Backspace") borrar();
+        if (e.key === "Escape") limpiar();
+      });
+    </script>
+  </body>
+</html>
