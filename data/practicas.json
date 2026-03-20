@@ -108,5 +108,10 @@
     "nombre": "Practica 22",
     "archivo": "Hernandez_Garcia_ejercicio22.html",
     "descripcion": "Formula general pero con formularios."
+  },
+  {
+    "nombre": "Practica 23",
+    "archivo": "Hernandez_Garcia_ejercicio23.html",
+    "descripcion": "Calculadora de IMC de mujeres unicamente."
   }
 ]
