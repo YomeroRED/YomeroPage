@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generador de Tablas de Multiplicar</title>
+  </head>
+  <body>
+    <h1>Generador de Tablas de Multiplicar</h1>
+    <p>
+      Introduzca un número entero positivo para generar las tablas desde el 1
+      hasta dicho valor.
+    </p>
+
+    <input type="number" id="numeroUsuario" placeholder="Ejemplo: 5" min="1" />
+    <button onclick="generarTablas()">Generar tablas de multiplicar</button>
+
+    <hr />
+
+    <div id="contenedorTablas"></div>
+
+    <script>
+      /**
+       * Función principal para generar las tablas de multiplicar
+       * basándose en la entrada del usuario.
+       */
+      function generarTablas() {
+        const input = document.getElementById("numeroUsuario");
+        const contenedor = document.getElementById("contenedorTablas");
+        const n = parseInt(input.value);
+
+        // Limpiar resultados previos
+        contenedor.innerHTML = "";
+
+        // Validación básica de número positivo
+        if (isNaN(n) || n <= 0) {
+          contenedor.innerHTML =
+            "<p>Error: Por favor, ingrese un número entero positivo válido.</p>";
+          return;
+        }
+
+        // Ciclo externo: Itera desde 1 hasta el número especificado (N)
+        for (let i = 1; i <= n; i++) {
+          // Creamos un encabezado para cada tabla
+          let tablaHTML = "<h3>Tabla del " + i + "</h3><ul>";
+
+          // Ciclo interno: Genera las multiplicaciones del 1 al 10 para la tabla actual
+          for (let j = 1; j <= 10; j++) {
+            let resultado = i * j;
+            tablaHTML += "<li>" + i + " x " + j + " = " + resultado + "</li>";
+          }
+
+          tablaHTML += "</ul>";
+
+          // Agregamos la tabla construida al contenedor principal
+          contenedor.innerHTML += tablaHTML;
+        }
+      }
+    </script>
+  </body>
+</html>

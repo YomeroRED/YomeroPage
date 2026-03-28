@@ -123,5 +123,10 @@
     "nombre": "Practica 25",
     "archivo": "Hernandez_Garcia_ejercicio25.html",
     "descripcion": "Próxima práctica."
+  },
+  {
+    "nombre": "Practica 26",
+    "archivo": "Hernandez_Garcia_ejercicio26.html",
+    "descripcion": "Tablas de multiplicar dinámicas."
   }
 ]
