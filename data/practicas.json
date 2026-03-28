@@ -113,5 +113,15 @@
     "nombre": "Practica 23",
     "archivo": "Hernandez_Garcia_ejercicio23.html",
     "descripcion": "Calculadora de IMC de mujeres unicamente."
+  },
+  {
+    "nombre": "Practica 24",
+    "archivo": "Hernandez_Garcia_ejercicio24.html",
+    "descripcion": "Fecha actual."
+  },
+  {
+    "nombre": "Practica 25",
+    "archivo": "Hernandez_Garcia_ejercicio25.html",
+    "descripcion": "Próxima práctica."
   }
 ]
