@@ -8,11 +8,16 @@ fetch("data/practicas.json")
 
       card.className = "card";
 
+      // La práctica 27 tiene ruta especial; las demás van a /proyectos/
+      const href = practica.especial
+        ? practica.archivo
+        : "proyectos/" + practica.archivo;
+
       card.innerHTML = `
 <h3>${practica.nombre}</h3>
 <p>${practica.descripcion}</p>
-<a href="proyectos/${practica.archivo}" target="_blank">
-Ver practicas
+<a href="${href}" target="_blank">
+Ver práctica
 </a>
 `;
 

@@ -1,17 +1,21 @@
 {
   "functions": {
-    "api/**/*.php": {
+    "api/practica27/*.php": {
       "runtime": "vercel-php@0.7.3"
     }
   },
   "routes": [
-    { "src": "/css/(.*)", "dest": "/css/$1" },
-    { "src": "/proyectos/practica21", "dest": "/api/proyectos/practica21.php" },
-    { "src": "/proyectos/practica22", "dest": "/api/proyectos/practica22.php" },
-    { "src": "/proyectos/practica23", "dest": "/api/proyectos/practica23.php" },
-    { "src": "/proyectos/practica24", "dest": "/api/proyectos/practica24.php" },
-    { "src": "/proyectos/practica25", "dest": "/api/proyectos/practica25.php" },
-    { "src": "/proyectos/practica26", "dest": "/api/proyectos/practica26.php" },
-    { "src": "/(.*)", "dest": "/api/index.php" }
+    { "src": "/css/(.*)",              "dest": "/css/$1" },
+    { "src": "/js/(.*)",               "dest": "/js/$1" },
+    { "src": "/data/(.*)",             "dest": "/data/$1" },
+    { "src": "/proyectos/(.*)",        "dest": "/proyectos/$1" },
+    { "src": "/practica27$",           "dest": "/practica27.html" },
+    { "src": "/practica27/practica21", "dest": "/api/practica27/practica21.php" },
+    { "src": "/practica27/practica22", "dest": "/api/practica27/practica22.php" },
+    { "src": "/practica27/practica23", "dest": "/api/practica27/practica23.php" },
+    { "src": "/practica27/practica24", "dest": "/api/practica27/practica24.php" },
+    { "src": "/practica27/practica25", "dest": "/api/practica27/practica25.php" },
+    { "src": "/practica27/practica26", "dest": "/api/practica27/practica26.php" },
+    { "src": "/(.*)",                  "dest": "/index.html" }
   ]
 }

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Práctica 27 – PHP</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+    <style>
+      .badge {
+        display: inline-block;
+        background: #7b4ba5;
+        color: white;
+        font-size: 0.65rem;
+        padding: 2px 8px;
+        border-radius: 12px;
+        vertical-align: middle;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-left: 8px;
+      }
+      .back-link {
+        display: inline-block;
+        margin: 0 20px 0 0;
+        font-size: 0.85rem;
+        color: white;
+        text-decoration: none;
+        opacity: 0.8;
+        transition: opacity 0.2s;
+      }
+      .back-link:hover { opacity: 1; }
+      .descripcion-p27 {
+        text-align: center;
+        color: #666;
+        font-size: 0.9rem;
+        margin: -8px 0 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="menu-icon">&#9776;</div>
+      <h1>Práctica 27</h1>
+      <div class="opiniones">
+        <a class="back-link" href="index.html">← Regresar</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="practicas">
+        <h2>Prácticas 21–26 con PHP <span class="badge">Server-side</span></h2>
+        <p class="descripcion-p27">
+          Las mismas prácticas del 21 al 26, pero ahora la lógica corre
+          en el servidor con PHP en lugar de JavaScript en el navegador.
+        </p>
+
+        <div id="contenedor-practicas">
+
+          <div class="card">
+            <h3>Práctica 21 – PHP</h3>
+            <p>Calculadora: operaciones aritméticas procesadas en el servidor.</p>
+            <a href="practica27/practica21" target="_blank">Ver práctica</a>
+          </div>
+
+          <div class="card">
+            <h3>Práctica 22 – PHP</h3>
+            <p>Fórmula general: discriminante y raíces calculadas con PHP.</p>
+            <a href="practica27/practica22" target="_blank">Ver práctica</a>
+          </div>
+
+          <div class="card">
+            <h3>Práctica 23 – PHP</h3>
+            <p>Calculadora de IMC para mujeres, categorías determinadas en servidor.</p>
+            <a href="practica27/practica23" target="_blank">Ver práctica</a>
+          </div>
+
+          <div class="card">
+            <h3>Práctica 24 – PHP</h3>
+            <p>Fecha actual obtenida del servidor PHP, no del navegador.</p>
+            <a href="practica27/practica24" target="_blank">Ver práctica</a>
+          </div>
+
+          <div class="card">
+            <h3>Práctica 25 – PHP</h3>
+            <p>Tablas de multiplicar del 1 al 10 generadas con ciclos PHP.</p>
+            <a href="practica27/practica25" target="_blank">Ver práctica</a>
+          </div>
+
+          <div class="card">
+            <h3>Práctica 26 – PHP</h3>
+            <p>Tablas de multiplicar dinámicas: el número lo ingresa el usuario y PHP genera el HTML.</p>
+            <a href="practica27/practica26" target="_blank">Ver práctica</a>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <button onclick="window.open('https://classroom.google.com','_blank')">Classroom</button>
+      <button onclick="window.open('https://chatgpt.com','_blank')">ChatGPT</button>
+      <button>Buscaminas</button>
+    </footer>
+  </body>
+</html>
