@@ -32,6 +32,8 @@
         </div>
         
         <button type="submit" onclick="procesarDatos()">Generar</button>
+        
+        <div id="salida" class="resultado" style="margin-top:16px;"></div>
 
         <script>
             function procesarDatos() {
