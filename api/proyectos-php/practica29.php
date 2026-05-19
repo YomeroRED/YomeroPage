@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
           <div>
             <label for="numero">Número</label>
             <input type="number" id="numero" name="numero" step="any"
-                   placeholder="Ej. 25"
+                   placeholder="Ej. 7"
                    value="<?= htmlspecialchars($_POST['numero'] ?? '') ?>">
           </div>
           <button type="submit">Verificar</button>
