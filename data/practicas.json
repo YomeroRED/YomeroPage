@@ -146,5 +146,11 @@
     "archivo": "../practica29",
     "descripcion": "Formulario de números pares e impares.",
     "especial": true
+  },
+  {
+    "nombre": "Practica 30",
+    "archivo": "../practica30",
+    "descripcion": "Generador de usuario e iniciales.",
+    "especial": true
   }
 ]
