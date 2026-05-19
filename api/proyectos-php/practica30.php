@@ -33,8 +33,6 @@
         
         <button type="submit" onclick="procesarDatos()">Generar</button>
 
-        <div class="resultado" id="salida"></div>
-
         <script>
             function procesarDatos() {
                 // 1. Leer las entradas del formulario
