@@ -38,6 +38,8 @@
 
     { "src": "/practica28", "dest": "/api/proyectos-php/practica28.php" },
 
+    { "src": "/practica29", "dest": "/api/proyectos-php/practica29.php" },
+
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }

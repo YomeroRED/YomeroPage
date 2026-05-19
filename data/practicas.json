@@ -138,7 +138,13 @@
   {
     "nombre": "Practica 28",
     "archivo": "../practica28",
-    "descripcion": "Conversión de Celsius a Fahrenheit con PHP.",
+    "descripcion": "Conversión de Celsius a Fahrenheit.",
+    "especial": true
+  },
+  {
+    "nombre": "Practica 29",
+    "archivo": "../practica29",
+    "descripcion": "Formulario de números pares e impares.",
     "especial": true
   }
 ]
