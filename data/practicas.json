@@ -1,29 +1,144 @@
 [
-  { "nombre": "Practica 1",  "archivo": "Hernandez_Garcia_ejercicio1.html",  "descripcion": "Hola mundo." },
-  { "nombre": "Practica 2",  "archivo": "Hernandez_Garcia_ejercicio2.html",  "descripcion": "Varios encabezados." },
-  { "nombre": "Practica 3",  "archivo": "Hernandez_Garcia_ejercicio3.html",  "descripcion": "Links." },
-  { "nombre": "Practica 4",  "archivo": "Hernandez_Garcia_ejercicio4.html",  "descripcion": "Tablas." },
-  { "nombre": "Practica 5",  "archivo": "Hernandez_Garcia_ejercicio5.html",  "descripcion": "Listas." },
-  { "nombre": "Practica 6",  "archivo": "Hernandez_Garcia_ejercicio6.html",  "descripcion": "Formularios." },
-  { "nombre": "Practica 7",  "archivo": "Hernandez_Garcia_ejercicio7.html",  "descripcion": "Multimedia." },
-  { "nombre": "Practica 8",  "archivo": "Hernandez_Garcia_ejercicio8.html",  "descripcion": "CSS básico." },
-  { "nombre": "Practica 9",  "archivo": "Hernandez_Garcia_ejercicio9.html",  "descripcion": "CSS avanzado." },
-  { "nombre": "Practica 10", "archivo": "Hernandez_Garcia_ejercicio10.html", "descripcion": "Proyecto final." },
-  { "nombre": "Practica 11", "archivo": "Hernandez_Garcia_ejercicio11.html", "descripcion": "Proyecto final mejorado." },
-  { "nombre": "Practica 12", "archivo": "Hernandez_Garcia_ejercicio12.html", "descripcion": "Proyecto final con JavaScript." },
-  { "nombre": "Practica 13", "archivo": "Hernandez_Garcia_ejercicio13.html", "descripcion": "Proyecto final con JavaScript y CSS." },
-  { "nombre": "Practica 14", "archivo": "Hernandez_Garcia_ejercicio14.html", "descripcion": "Proyecto final con JavaScript, CSS y multimedia." },
-  { "nombre": "Practica 15", "archivo": "Hernandez_Garcia_ejercicio15.html", "descripcion": "Prestamos de equipo en la uas." },
-  { "nombre": "Practica 16", "archivo": "Hernandez_Garcia_ejercicio16.html", "descripcion": "Proyecto final con mejoras de accesibilidad." },
-  { "nombre": "Practica 17", "archivo": "Hernandez_Garcia_ejercicio17.html", "descripcion": "Proyecto final con mejoras de rendimiento." },
-  { "nombre": "Practica 18", "archivo": "Hernandez_Garcia_ejercicio18.html", "descripcion": "Proyecto final con mejoras de SEO." },
-  { "nombre": "Practica 19", "archivo": "Hernandez_Garcia_ejercicio19.html", "descripcion": "Salidas de texto en JavaScript." },
-  { "nombre": "Practica 20", "archivo": "Hernandez_Garcia_ejercicio20.html", "descripcion": "Impresion de operaciones con variables en JavaScript." },
-  { "nombre": "Practica 21", "archivo": "Hernandez_Garcia_ejercicio21.html", "descripcion": "Calculadora, con formulario bonito." },
-  { "nombre": "Practica 22", "archivo": "Hernandez_Garcia_ejercicio22.html", "descripcion": "Formula general pero con formularios." },
-  { "nombre": "Practica 23", "archivo": "Hernandez_Garcia_ejercicio23.html", "descripcion": "Calculadora de IMC de mujeres unicamente." },
-  { "nombre": "Practica 24", "archivo": "Hernandez_Garcia_ejercicio24.html", "descripcion": "Fecha actual." },
-  { "nombre": "Practica 25", "archivo": "Hernandez_Garcia_ejercicio25.html", "descripcion": "Próxima práctica." },
-  { "nombre": "Practica 26", "archivo": "Hernandez_Garcia_ejercicio26.html", "descripcion": "Tablas de multiplicar dinámicas." },
-  { "nombre": "Practica 27", "archivo": "../practica27", "descripcion": "Prácticas 21–26 rehechas con PHP (programación del lado del servidor).", "especial": true }
+  {
+    "nombre": "Practica 1",
+    "archivo": "Hernandez_Garcia_ejercicio1.html",
+    "descripcion": "Hola mundo."
+  },
+  {
+    "nombre": "Practica 2",
+    "archivo": "Hernandez_Garcia_ejercicio2.html",
+    "descripcion": "Varios encabezados."
+  },
+  {
+    "nombre": "Practica 3",
+    "archivo": "Hernandez_Garcia_ejercicio3.html",
+    "descripcion": "Links."
+  },
+  {
+    "nombre": "Practica 4",
+    "archivo": "Hernandez_Garcia_ejercicio4.html",
+    "descripcion": "Tablas."
+  },
+  {
+    "nombre": "Practica 5",
+    "archivo": "Hernandez_Garcia_ejercicio5.html",
+    "descripcion": "Listas."
+  },
+  {
+    "nombre": "Practica 6",
+    "archivo": "Hernandez_Garcia_ejercicio6.html",
+    "descripcion": "Formularios."
+  },
+  {
+    "nombre": "Practica 7",
+    "archivo": "Hernandez_Garcia_ejercicio7.html",
+    "descripcion": "Multimedia."
+  },
+  {
+    "nombre": "Practica 8",
+    "archivo": "Hernandez_Garcia_ejercicio8.html",
+    "descripcion": "CSS básico."
+  },
+  {
+    "nombre": "Practica 9",
+    "archivo": "Hernandez_Garcia_ejercicio9.html",
+    "descripcion": "CSS avanzado."
+  },
+  {
+    "nombre": "Practica 10",
+    "archivo": "Hernandez_Garcia_ejercicio10.html",
+    "descripcion": "Proyecto final."
+  },
+  {
+    "nombre": "Practica 11",
+    "archivo": "Hernandez_Garcia_ejercicio11.html",
+    "descripcion": "Proyecto final mejorado."
+  },
+  {
+    "nombre": "Practica 12",
+    "archivo": "Hernandez_Garcia_ejercicio12.html",
+    "descripcion": "Proyecto final con JavaScript."
+  },
+  {
+    "nombre": "Practica 13",
+    "archivo": "Hernandez_Garcia_ejercicio13.html",
+    "descripcion": "Proyecto final con JavaScript y CSS."
+  },
+  {
+    "nombre": "Practica 14",
+    "archivo": "Hernandez_Garcia_ejercicio14.html",
+    "descripcion": "Proyecto final con JavaScript, CSS y multimedia."
+  },
+  {
+    "nombre": "Practica 15",
+    "archivo": "Hernandez_Garcia_ejercicio15.html",
+    "descripcion": "Prestamos de equipo en la uas."
+  },
+  {
+    "nombre": "Practica 16",
+    "archivo": "Hernandez_Garcia_ejercicio16.html",
+    "descripcion": "Proyecto final con mejoras de accesibilidad."
+  },
+  {
+    "nombre": "Practica 17",
+    "archivo": "Hernandez_Garcia_ejercicio17.html",
+    "descripcion": "Proyecto final con mejoras de rendimiento."
+  },
+  {
+    "nombre": "Practica 18",
+    "archivo": "Hernandez_Garcia_ejercicio18.html",
+    "descripcion": "Proyecto final con mejoras de SEO."
+  },
+  {
+    "nombre": "Practica 19",
+    "archivo": "Hernandez_Garcia_ejercicio19.html",
+    "descripcion": "Salidas de texto en JavaScript."
+  },
+  {
+    "nombre": "Practica 20",
+    "archivo": "Hernandez_Garcia_ejercicio20.html",
+    "descripcion": "Impresion de operaciones con variables en JavaScript."
+  },
+  {
+    "nombre": "Practica 21",
+    "archivo": "Hernandez_Garcia_ejercicio21.html",
+    "descripcion": "Calculadora, con formulario bonito."
+  },
+  {
+    "nombre": "Practica 22",
+    "archivo": "Hernandez_Garcia_ejercicio22.html",
+    "descripcion": "Formula general pero con formularios."
+  },
+  {
+    "nombre": "Practica 23",
+    "archivo": "Hernandez_Garcia_ejercicio23.html",
+    "descripcion": "Calculadora de IMC de mujeres unicamente."
+  },
+  {
+    "nombre": "Practica 24",
+    "archivo": "Hernandez_Garcia_ejercicio24.html",
+    "descripcion": "Fecha actual."
+  },
+  {
+    "nombre": "Practica 25",
+    "archivo": "Hernandez_Garcia_ejercicio25.html",
+    "descripcion": "Próxima práctica."
+  },
+  {
+    "nombre": "Practica 26",
+    "archivo": "Hernandez_Garcia_ejercicio26.html",
+    "descripcion": "Tablas de multiplicar dinámicas."
+  },
+  {
+    "nombre": "Practica 27",
+    "archivo": "../practica27",
+    "descripcion": "Prácticas 21–26 rehechas con PHP (programación del lado del servidor).",
+    "especial": true
+  },
+  {
+    "nombre": "Practica 28",
+    "archivo": "../practica28",
+    "descripcion": "Conversión de Celsius a Fahrenheit con PHP.",
+    "especial": true
+  }
 ]
