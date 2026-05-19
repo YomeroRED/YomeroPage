@@ -31,7 +31,7 @@
             <input type="text" id="apellido" placeholder="Ej. Lopez">
         </div>
         
-        <button onclick="procesarDatos()">Generar</button>
+        <button type="submit" onclick="procesarDatos()">Generar</button>
 
         <div class="resultado" id="salida"></div>
 
@@ -55,7 +55,7 @@
 
                 // 4. Imprimir el resultado exactamente como se solicitó
                 document.getElementById('salida').innerHTML = 
-                    `Nombre de usuario: ${usuario}<br>Iniciales (en mayúsculas): ${iniciales}`;
+                    `Nombre de usuario: ${usuario}<br>Iniciales: ${iniciales}`;
             }
         </script>
 
