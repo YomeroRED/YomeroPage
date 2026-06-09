@@ -44,6 +44,16 @@
 
     { "src": "/practica31", "dest": "/api/proyectos-php/practica31.php" },
 
+    { "src": "/practica32", "dest": "/api/proyectos-php/practica32.php" },
+
+    { "src": "/practica33", "dest": "/api/proyectos-php/practica33.php" },
+
+    { "src": "/practica34", "dest": "/api/proyectos-php/practica34.php" },
+
+    { "src": "/practica35", "dest": "/api/proyectos-php/practica35.php" },
+
+    { "src": "/practica36", "dest": "/api/proyectos-php/practica36.php" },
+
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }

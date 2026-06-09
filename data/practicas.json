@@ -158,5 +158,35 @@
     "archivo": "../practica31",
     "descripcion": "Edad para votar.",
     "especial": true
+  },
+  {
+    "nombre": "Practica 32",
+    "archivo": "../practica32",
+    "descripcion": "Calculadora de calificaciones.",
+    "especial": true
+  },
+  {
+    "nombre": "Practica 33",
+    "archivo": "../practica33",
+    "descripcion": "Verificacion de anagramas.",
+    "especial": true
+  },
+  {
+    "nombre": "Practica 34",
+    "archivo": "../practica34",
+    "descripcion": "Cambio de divisas",
+    "especial": true
+  },
+  {
+    "nombre": "Practica 35",
+    "archivo": "../practica35",
+    "descripcion": "Convertidor de tiempo",
+    "especial": true
+  },
+  {
+    "nombre": "Practica 36",
+    "archivo": "../practica36",
+    "descripcion": "CRUD con PHP y MySQL",
+    "especial": true
   }
 ]
