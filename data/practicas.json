@@ -2,92 +2,92 @@
   {
     "nombre": "Practica 1",
     "archivo": "Hernandez_Garcia_ejercicio1.html",
-    "descripcion": "Hola mundo."
+    "descripcion": "HTML basico."
   },
   {
     "nombre": "Practica 2",
     "archivo": "Hernandez_Garcia_ejercicio2.html",
-    "descripcion": "Varios encabezados."
+    "descripcion": "Encabezados HTML."
   },
   {
     "nombre": "Practica 3",
     "archivo": "Hernandez_Garcia_ejercicio3.html",
-    "descripcion": "Links."
+    "descripcion": "Parrafos y enlaces."
   },
   {
     "nombre": "Practica 4",
     "archivo": "Hernandez_Garcia_ejercicio4.html",
-    "descripcion": "Tablas."
+    "descripcion": "Listas ordenadas y desordenadas."
   },
   {
     "nombre": "Practica 5",
     "archivo": "Hernandez_Garcia_ejercicio5.html",
-    "descripcion": "Listas."
+    "descripcion": "Imagenes en HTML."
   },
   {
     "nombre": "Practica 6",
     "archivo": "Hernandez_Garcia_ejercicio6.html",
-    "descripcion": "Formularios."
+    "descripcion": "Tabalas en HTML."
   },
   {
     "nombre": "Practica 7",
     "archivo": "Hernandez_Garcia_ejercicio7.html",
-    "descripcion": "Multimedia."
+    "descripcion": "Formulario basico en HTML."
   },
   {
     "nombre": "Practica 8",
     "archivo": "Hernandez_Garcia_ejercicio8.html",
-    "descripcion": "CSS básico."
+    "descripcion": "Formularios con campos de seleccion y radio."
   },
   {
     "nombre": "Practica 9",
     "archivo": "Hernandez_Garcia_ejercicio9.html",
-    "descripcion": "CSS avanzado."
+    "descripcion": "Formularios con casillas de verificacion."
   },
   {
     "nombre": "Practica 10",
     "archivo": "Hernandez_Garcia_ejercicio10.html",
-    "descripcion": "Proyecto final."
+    "descripcion": "Enlaces con imagenes en HTML."
   },
   {
     "nombre": "Practica 11",
     "archivo": "Hernandez_Garcia_ejercicio11.html",
-    "descripcion": "Proyecto final mejorado."
+    "descripcion": "Enlaces de anclaje o de ancla."
   },
   {
     "nombre": "Practica 12",
     "archivo": "Hernandez_Garcia_ejercicio12.html",
-    "descripcion": "Proyecto final con JavaScript."
+    "descripcion": "Video integrado con iframe."
   },
   {
     "nombre": "Practica 13",
     "archivo": "Hernandez_Garcia_ejercicio13.html",
-    "descripcion": "Proyecto final con JavaScript y CSS."
+    "descripcion": "Integrar audio en HTML."
   },
   {
     "nombre": "Practica 14",
     "archivo": "Hernandez_Garcia_ejercicio14.html",
-    "descripcion": "Proyecto final con JavaScript, CSS y multimedia."
+    "descripcion": "Enlaces de desacarga."
   },
   {
     "nombre": "Practica 15",
     "archivo": "Hernandez_Garcia_ejercicio15.html",
-    "descripcion": "Prestamos de equipo en la uas."
+    "descripcion": "Prestamos de equipo en la UAS."
   },
   {
     "nombre": "Practica 16",
     "archivo": "Hernandez_Garcia_ejercicio16.html",
-    "descripcion": "Proyecto final con mejoras de accesibilidad."
+    "descripcion": "Lo mismo que el 15 pero con CSS"
   },
   {
     "nombre": "Practica 17",
     "archivo": "Hernandez_Garcia_ejercicio17.html",
-    "descripcion": "Proyecto final con mejoras de rendimiento."
+    "descripcion": "Documentacion de ejemplo con CSS."
   },
   {
     "nombre": "Practica 18",
     "archivo": "Hernandez_Garcia_ejercicio18.html",
-    "descripcion": "Proyecto final con mejoras de SEO."
+    "descripcion": "Sitio web FIM."
   },
   {
     "nombre": "Practica 19",
@@ -97,7 +97,7 @@
   {
     "nombre": "Practica 20",
     "archivo": "Hernandez_Garcia_ejercicio20.html",
-    "descripcion": "Impresion de operaciones con variables en JavaScript."
+    "descripcion": "Impresion de operaciones con JavaScript."
   },
   {
     "nombre": "Practica 21",
@@ -122,7 +122,7 @@
   {
     "nombre": "Practica 25",
     "archivo": "Hernandez_Garcia_ejercicio25.html",
-    "descripcion": "Próxima práctica."
+    "descripcion": "Tablas de multiplicar con javascript."
   },
   {
     "nombre": "Practica 26",
