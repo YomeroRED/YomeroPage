@@ -188,5 +188,11 @@
     "archivo": "../practica36",
     "descripcion": "CRUD con PHP y MySQL",
     "especial": true
+  },
+  {
+    "nombre": "Practica 37",
+    "archivo": "../practica37",
+    "descripcion": "sesiones en PHP",
+    "especial": true
   }
 ]
