@@ -152,5 +152,11 @@
     "archivo": "../practica30",
     "descripcion": "Generador de usuario e iniciales.",
     "especial": true
+  },
+  {
+    "nombre": "Practica 31",
+    "archivo": "../practica31",
+    "descripcion": "Edad para votar.",
+    "especial": true
   }
 ]
